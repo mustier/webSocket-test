@@ -21701,19 +21701,22 @@ this.a=b},
 nA:function nA(a){this.a=a},
 pQ:function pQ(a,b){this.a=a
 this.b=b},
-azb(a,b,c,d){var s,r,q,p=new A.a3q(A.al_(A.aAn(),B.t,B.lb,B.lb,new A.adt(a),A.PI(),new A.adu(a),new A.adv(a),A.PI(),A.PI(),A.PI(),A.PI(),new A.adw(a),null,B.t,null,b,!1,null))
+azb(a,b,c,d){var s,r,q,p=new A.a3q(A.al_(A.aAn(),B.t,B.lb,B.lb,new A.adt(a,d),A.PI(),new A.adu(a,d),new A.adv(a),A.PI(),A.PI(),A.PI(),A.PI(),new A.adw(a,d),null,B.t,null,b,!1,null))
 try{c.$1(p)
 if(!p.d){r=p
 r.d=!0
 r.p0()
-if(p.d){A.fe(a,"Client Activated","success")
-d.$1(!0)}else{A.fe(a,"Client can NOT Activated","error")
+if(p.d)A.fe(a,"Client Activated","success")
+else{A.fe(a,"Client can NOT Activated","error")
 d.$1(!1)}}else A.fe(a,"Client is already Activate","info")}catch(q){s=A.ar(q)
 A.eI("error "+A.m(s))
 A.fe(a,"Error "+A.m(s),"error")}},
-adt:function adt(a){this.a=a},
-adu:function adu(a){this.a=a},
-adw:function adw(a){this.a=a},
+adt:function adt(a,b){this.a=a
+this.b=b},
+adu:function adu(a,b){this.a=a
+this.b=b},
+adw:function adw(a,b){this.a=a
+this.b=b},
 adv:function adv(a){this.a=a},
 aAg(a,b){var s=null,r=a.a,q=A.c([],t.E)
 q.push(new A.cb(B.cE,A.jS(new A.cb(B.cE,A.fF(r,1000,B.bb,s,s,s,s),s),B.C,B.y1,new A.cL(B.zs,s,s,B.et,s,s,B.at),s,s,s,s),s))
@@ -71144,14 +71147,17 @@ A.pQ.prototype={
 gcB(){return this.a}}
 A.adt.prototype={
 $1(a){A.fe(this.a,"Connected","success")
-A.eI(a)},
+A.eI(a)
+this.b.$1(!0)},
 $S:35}
 A.adu.prototype={
-$1(a){A.fe(this.a,"Disconnected","info")},
+$1(a){A.fe(this.a,"Disconnected","info")
+this.b.$1(!1)},
 $S:35}
 A.adw.prototype={
 $1(a){A.fe(this.a,"WebSocket Error","error")
-A.eI("WebSocket Error "+J.dF(a.gcB()))},
+A.eI("WebSocket Error "+J.dF(a.gcB()))
+this.b.$1(!1)},
 $S:20}
 A.adv.prototype={
 $1(a){A.fe(this.a,"Stomp Error","error")
